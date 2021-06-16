@@ -1,0 +1,144 @@
+const functions = require('./cleanData');
+const eventInfo = require('../prototypes/eventInfo.js');
+const eventObject = require('../prototypes/eventObject.js');
+const request = require('./getData.js');
+const loadConfig = require('../DAL/loadConfig.js');
+/*
+test('Promise resolves', async () => {
+    await expect(functions.cleanData(config, stringHTML)
+    ).resolves.toBeDefined()
+},100000);
+
+test('HTML return data', () => {
+    let configFileName = 'billetlugenSearch.json';
+
+    let config = loadConfig.loadConfig('billetlugenSearch.json');
+
+    config = loadConfig.loadConfig(configFileName);
+
+    let stringHTML = request.getData(config.billetlugenHeader, config.hostName, config.subURL);
+    expect.assertions(10);
+    return functions.cleanData(config, stringHTML)
+    .then(data => {
+        expect(eventObjs[0]).toEqual('Test Event')
+        expect(stringHTML.name).toBeDefined()
+        expect(eventObj.location).toBeDefined()
+        expect(eventObj.venue).toEqual('Denmark')
+        expect(sortedEventList.date).toEqual(9000)
+        expect(sortedEventList.time).toEqual('Aalborg')
+        expect(sortedEventList.price).toEqual('Bejsebakken 12')
+        expect(sortedEventList.description).toEqual('Test Event Description')
+        expect(sortedEventList.imageLink).toEqual(240)
+        expect(sortedEventList.category).toEqual(90)
+    })
+});
+*/
+
+let source  = "www.billetlugen.dk/mens-vi-venter-aarhus-billetter.html?affiliate=DKA&amp&doc=artistPages%2Ftickets&amp&fun=artist&amp&action=tickets&amp&key=2771292%2413001063",
+    imgSource = 'www.billetlugen.dk/obj/media/DK-eventim/teaser/222x222/2020/p_scenen_billetlugen_222x222.jpg';
+
+/*
+test('Shall return an array', async () => {
+    let sub = ['/billetter.html?affiliate=DKA&doc=category&fun=kategorieliste&detailadoc=erdetaila&detailbdoc=evdetailb&hkId=140&nextDays=14&nurbuchbar=true&showFilter=yes&sort_by=name&sort_direction=asc']
+    let sub2 = ['/uddannelser/optagelse/kandidat/']
+    let configFileName = 'billetlugenSearch.json',
+        config = await loadConfig.loadConfig('billetlugenSearch.json'),
+        stringHTML = await request.getData(config.billetlugenHeader, 'www.billetlugen.dk', sub);
+    
+    config = await loadConfig.loadConfig(configFileName);
+
+    let Obj = await functions.cleanData(config, stringHTML);
+    console.log('-------------------------');
+    //console.log(Obj);
+
+    let expectedValues = ["Mens vi venter", "2020-06-27T17:30:00.000Z", undefined, undefined, undefined, "Aarhus", "Tangkrogen", true, 245, undefined, source, imgSource, 1, undefined ];
+    
+    for(let i = 0; i < expectedValues.length; i++) {
+        expect.assertions(1);
+        return expect(Obj[i].title).toEqual(expectedValues[i])   // Checks if cleanData returns an array when given the parameters config and stringHTML
+    }
+    //return expect(Obj.length === 0).toBeTruthy();
+},100000);
+*/
+
+
+test('Positive test cleanData()', async () => {
+
+    let subURL = ['/billetter.html?affiliate=DKA&doc=category&fun=kategorieliste&detailadoc='+
+        'erdetaila&detailbdoc=evdetailb&hkId=140&nextDays=14&nurbuchbar=true&showFilter=yes&sort_by=name&sort_direction=asc'],
+        source  = 'www.billetlugen.dk/mens-vi-venter-aarhus-billetter.html?affiliate=DKA&amp&doc=artistPages%2Ftickets&amp&fun'+
+        '=artist&amp&action=tickets&amp&key=2771292%2413001063',
+        imgSource = 'www.billetlugen.dk/obj/media/DK-eventim/teaser/222x222/2020/p_scenen_billetlugen_222x222.jpg',
+        description = 'MENS VI VENTER…  Velgørenhedsshow til fordel for kronisk syge  Sammen med Jasmin Gabay, Patrick Dorgan, Xander og Barbara Moleko, samt Anne Sofie Espersen som konferencier,'+ 
+        'inviteres I til en skøn aften på P-Scenen i Aarhus onsdag d. 27. maj 2020 kl. 19:30.'+
+        ' Vi skal have en FEST og slå ventetiden ihjel. For vi venter alle på noget - nogen på en dato, eller en ny runde genåbning, mens andre venter på en vaccine.'+
+        '  Vi vil åbne øjnene for, hvordan Corona rammer et liv med kronisk sygdom gennem fortællinger og billeder. I en god time, skal vi hygge, vinke, synge og mærke fællesskabet, sammen hver for sig.'+
+        '  Velgørenhedsshowet er sat i verden af foreningen Kroniske Influencers. De arbejder hver dag på at gøre en forskel for kronisk syge ved at nedbryde tabuer og inspirere til et godt og positivt liv, trods sygdom og smerter.'+
+        ' Foreningen er stiftet af tre yngre kvinder, der selv lever med kroniske lidelser. I mangel på et mødested, et sted med kærlighed og krammere, startede de deres eget society, som i dag er et stort socialt fællesskab for kronikere.'+
+        '  Showet foregår på P-Scenen, Tangkrogen i Aarhus onsdag d. 27. maj kl. 19:30.';
+
+        let expectedValues = ["Mens vi venter", "2020-06-27T17:30:00.000Z", undefined, undefined, undefined, "Aarhus", "Tangkrogen",
+        description, 245, undefined, source, imgSource, 1, undefined ],
+        configFileName = 'billetlugenSearch.json',
+        config = await loadConfig.loadConfig('billetlugenSearch.json'),
+        stringHTML = await request.getData(config.billetlugenHeader, 'www.billetlugen.dk', subURL),
+        obj = await functions.cleanData(config, stringHTML);
+        
+        
+    config = await loadConfig.loadConfig(configFileName)
+
+    console.log(obj[0]);
+
+    console.log(objValues[1]);
+
+        expect.assertions(1);
+        return expect(obj[1].title).toEqual(expectedValues[0])
+},100000);
+
+
+
+
+test('Negative test cleanData()', async () => {
+    let subURL = ['/uddannelser/optagelse/kandidat/']
+    let configFileName = 'billetlugenSearch.json',
+        config = await loadConfig.loadConfig('billetlugenSearch.json'),
+        stringHTML = await request.getData(config.billetlugenHeader, 'www.aau.dk', subURL);
+    
+    config = await loadConfig.loadConfig(configFileName);
+
+    let obj = await functions.cleanData(config, stringHTML);
+    
+    for(let i = 0; i < obj.length; i++) {
+        expect.assertions(1);
+        return expect(obj[0].length === 0).toBeTruthy();
+    }
+},100000);
+
+
+// CHECK FOR TRUTHY OR FALSY VALUES
+// toBeNULL matches only null
+// toBeUndefined matches only undefined
+// toBeDefined is the opposite of to be undefined
+// toBeTruthy matches anything that an if statement treats as true
+// toBeFalsy matches anything that an if statement treats as false
+
+//console.log('Debug');
+
+function EventInfo(link, name, location, venue, date, time, price, description, imageLink, category) {
+
+    this.link = link;
+    this.name = name;
+    this.location = location;
+    this.venue = venue;
+    this.date = date;
+    this.time = time;
+    this.price = price;
+    this.description = description;
+    this.imageLink = imageLink;
+    this.category = category;
+};
+
+module.exports = EventInfo;
+
+
+

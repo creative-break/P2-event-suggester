@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "API", "API\API.njsproj", "{CD1FFBD8-2744-44E3-A488-DBFB74C166E1}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Datascraper", "Datascraper\Datascraper.njsproj", "{922A980C-129C-48FB-A09A-3066BAF53451}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{36A4EE82-E36B-4058-A9D7-FB92152B50AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mySQL", "mySQL", "{7FEE0FEF-E6E4-4D27-B821-E825C36F8D31}"
+	ProjectSection(SolutionItems) = preProject
+		Common\mySQL\mysqlDB.js = Common\mySQL\mysqlDB.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "coordinateHelper", "coordinateHelper", "{39501907-728D-42F4-8EED-E0E8344FE88E}"
+	ProjectSection(SolutionItems) = preProject
+		Common\coordinateHelper\coordinateToGeoInfo.js = Common\coordinateHelper\coordinateToGeoInfo.js
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD1FFBD8-2744-44E3-A488-DBFB74C166E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD1FFBD8-2744-44E3-A488-DBFB74C166E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD1FFBD8-2744-44E3-A488-DBFB74C166E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD1FFBD8-2744-44E3-A488-DBFB74C166E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{922A980C-129C-48FB-A09A-3066BAF53451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{922A980C-129C-48FB-A09A-3066BAF53451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{922A980C-129C-48FB-A09A-3066BAF53451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{922A980C-129C-48FB-A09A-3066BAF53451}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7FEE0FEF-E6E4-4D27-B821-E825C36F8D31} = {36A4EE82-E36B-4058-A9D7-FB92152B50AF}
+		{39501907-728D-42F4-8EED-E0E8344FE88E} = {36A4EE82-E36B-4058-A9D7-FB92152B50AF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E6FB10AA-CC18-4AF6-8443-46DA51047CE1}
+	EndGlobalSection
+EndGlobal

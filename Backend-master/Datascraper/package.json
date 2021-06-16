@@ -1,0 +1,12 @@
+{
+  "name": "datascraper",
+  "version": "0.0.0",
+  "description": "Datascraper",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}

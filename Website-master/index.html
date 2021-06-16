@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--Makes sure the page is responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Reset stylesheet, this stylesheet is borrowed from http://richclarkdesign.com, and resets the browsers presettings-->
+    <link rel="resetstylesheet" href=".//css/resetStyle.css">
+    <!--Our style sheet-->
+    <link rel="stylesheet" href=".//css/style.css">
+    <!--Link to the font used on the page-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand&display=swap">
+    <!--Here is our JavaScript code-->
+    <script defer src=".//js/login.js"></script>
+    <script defer src=".//js/main.js"></script>
+    <!--Tab name-->
+    <title>Login</title>
+</head>
+
+<body>
+    <!--Header: The top grey area of the page-->
+    <header>
+        <nav>
+            <section class="nav">
+                <div class="logo"></div>
+                <div class="headline">
+                    <h1>Event Suggester</h1>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <section class="welcome">
+            <h2>Log in for at benytte dig af Event Suggester</h2>
+        </section>
+        <!--LOG-IN form -->
+        <form id="loginForm" method="post" enctype="multipart/form-data">
+            <div class="container">
+                <!--Here the user can enter the username-->
+                <label for="username"><b>Brugernavn</b></label><br>
+                <input id="username" type="text" placeholder="Indtast brugernavn" name="username" required><br>
+                <!--Here the user can enter the password-->
+                <label for="password"><b>Adgangskode</b></label><br>
+                <input id="password" type="password" placeholder="Indtast adgangskode" name="password" required><br>
+                <!--Login button-->
+                <button id="loginBtn" type="button">Login</button><br>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

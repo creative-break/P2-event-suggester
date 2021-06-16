@@ -1,0 +1,560 @@
+/* Her sætter vi eksisterende padding og margin til 0 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Headeren får en baggrundsfarve samt en bredde og højde (det er den grå top på siden) */
+
+header {
+    background-color: rgb(59, 59, 59);
+    width: 100%;
+    height: 60px;
+}
+
+
+/* Her sætter vi billedet af papegøjen ind og sætter dens højde samt bredde */
+
+.logo {
+    background-image: url("../img/logo.png");
+    height: 40px;
+    width: 80px;
+    background-repeat: no-repeat;
+    /*gør så billedet ikke gentages */
+    background-size: 50%;
+    background-position: top;
+    padding: 10px 0px;
+}
+
+
+/* Dette er sektionen med papegøjen og overskriften Event suggester */
+
+.nav {
+    width: 100%;
+    height: 60px;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(164, 168, 168);
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Overskriften Event suggester*/
+
+.headline h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 15px 10px;
+}
+
+
+/* Dette er sektionen med underteksten*/
+
+.welcome {
+    color: rgb(164, 168, 168);
+    padding: 20px 10px;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+
+.welcome h2 {
+    color: rgb(164, 168, 168);
+    font-size: 15px;
+}
+
+.welcome h3 {
+    color: rgb(164, 168, 168);
+    font-size: 10px;
+}
+
+
+/*LOG-IN form*/
+
+form {
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+}
+
+
+/* Input felterne */
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+/* Knappen <login> */
+
+button {
+    background-color: rgb(92, 94, 92);
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+/* Hover effekt ved knappen */
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+/* Padding på container */
+
+.container {
+    padding: 16px;
+}
+
+.rememberLogin {
+    padding-top: 16px;
+}
+
+
+/* SLUT LOG-IN*/
+
+
+/* Underoverskrift */
+
+.search h3 {
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(164, 168, 168);
+    font-size: 10px;
+    text-align: center;
+    padding: 10px 30px;
+}
+
+
+/* Kategorier */
+
+.category {
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(164, 168, 168);
+    padding-bottom: 30px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.form {
+    font-family: 'Quicksand', sans-serif;
+    text-align: left;
+    padding: 10px 0px;
+    display: inline-block;
+    font-size: 10px;
+}
+
+.form label {
+    margin-right: 15px;
+}
+
+.form input {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.formCat {
+    text-align: center;
+}
+
+
+/* knap: <se arrangementer> */
+
+.seeArrangements {
+    text-align: center;
+}
+
+#seeArrangements {
+    width: 150px;
+    /* Bredden på knappen                   */
+    font-family: 'Quicksand', sans-serif;
+    /* Skrifttype                           */
+    font-weight: 700;
+    /* Gør teksten fed                      */
+    border-radius: 5px;
+    /* Gør hjørnerne runde på knappen       */
+    font-size: 12px;
+}
+
+
+/* knap: <videre> og <ny søgning> */
+
+.forward,
+.newSearch {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.forward button {
+    float: right;
+    width: 90px;
+    /* Bredden på knappen                    */
+    font-family: 'Quicksand', sans-serif;
+    /* Skrifttype                           */
+    font-weight: 700;
+    /* Gør teksten fed                      */
+    border-radius: 5px;
+    /* Gør hjørnerne runde på knappen       */
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.newSearch button {
+    float: left;
+    width: 120px;
+    /* Bredden på knappen                    */
+    font-family: 'Quicksand', sans-serif;
+    /* Skrifttype                           */
+    font-weight: 700;
+    /* Gør teksten fed                      */
+    border-radius: 5px;
+    /* Gør hjørnerne runde på knappen       */
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+
+/* knap: < og > */
+
+.swipeLeft,
+.swipeRight {
+    width: 20px;
+    /* Bredden på knappen                    */
+    font-family: 'Quicksand', sans-serif;
+    /* Skrifttype                           */
+    font-weight: 700;
+    /* Gør teksten fed                      */
+    font-size: 10px;
+    text-align: center;
+    padding: 0 5px;
+}
+
+
+/* Bokse til arrangementerne*/
+
+.morning,
+.afternoon,
+.evening {
+    display: flex;
+    text-align: left;
+    justify-content: flex-start;
+    background-color: #c1c1c1;
+    border-style: solid;
+    border-color: rgb(59, 59, 59);
+    height: 200px;
+}
+
+
+/* indhold i boksene */
+
+.text {
+    color: rgb(37, 37, 37);
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    width: 50%;
+    padding-left: 15px;
+}
+
+.text h4 {
+    font-size: 12px;
+    padding: 6px 0;
+    font-weight: 900;
+}
+
+.text h5 {
+    font-size: 10px;
+    padding: 2px 0;
+    font-weight: 400;
+}
+
+#imgMorning,
+#imgAfternoon,
+#imgEvening {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+}
+
+#imgMorning {
+    background-image: url(#);
+    /* Vi skal finde en måde at ændre denne på*/
+}
+
+#imgAfternoon {
+    background-image: url(#);
+    /* Vi skal finde en måde at ændre denne på*/
+}
+
+#imgEvening {
+    background-image: url(#);
+    /* Vi skal finde en måde at ændre denne på*/
+}
+
+#textMorning,
+#textAfternoon,
+#textEvening {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    display: none;
+}
+
+#descriptionMorning,
+#descriptionAfternoon,
+#descriptionEvening {
+    text-align: left;
+    color: rgb(164, 168, 168);
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 10px;
+    padding-bottom: 0;
+    font-weight: 400;
+}
+
+#externSiteMorning,
+#externSiteAfternoon,
+#externSiteEvening {
+    text-align: left;
+    color: rgb(164, 168, 168);
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 10px;
+    padding-bottom: 0;
+    font-weight: 400;
+    padding-top: 10px;
+}
+
+#externSiteMorning a,
+#externSiteAfternoon a,
+#externSiteEvening a {
+    text-align: left;
+    color: rgb(164, 168, 168);
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 10px;
+    padding-bottom: 0;
+    font-weight: 700;
+}
+
+#headMorning,
+#headAfternoon,
+#headEvening {
+    text-align: left;
+    color: rgb(164, 168, 168);
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 10px;
+    padding-bottom: 0;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.morningH3,
+.afternoonH3,
+.eveningH3 {
+    text-align: center;
+    color: rgb(164, 168, 168);
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(59, 59, 59);
+}
+
+.notMorning,
+.notAfternoon,
+.notEvening {
+    color: rgb(164, 168, 168);
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 10px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    display: block;
+}
+
+
+/* MAP */
+
+#map {
+    width: 100%;
+    height: 500px;
+    align-items: center;
+}
+
+
+/* design af #mapSearchContainer lånt af esri */
+
+#mapSearchContainer {
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    height: 30px;
+    width: 180px;
+    z-index: 110;
+    font-size: 10pt;
+    color: #5d5d5d;
+    border: solid 1px #bbb;
+    background-color: #f8f8f8;
+}
+
+
+/* Herunder står de værdier der er gældende når en bruger tilgår siden på en skærm der er min 768px bred*/
+
+@media only screen and (min-width: 768px) {
+    main {
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-bottom: 30px;
+    }
+    header {
+        height: 100px;
+        margin: 0 0;
+    }
+    .headline h1 {
+        font-size: 30px;
+        padding: 30px 20px;
+    }
+    .logo {
+        height: 100px;
+        width: 100px;
+        background-size: 80%;
+        padding: 0 0px;
+    }
+    .welcome h2 {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        font-size: 25px;
+    }
+    .welcome h3 {
+        padding-bottom: 15px;
+        padding-left: 50px;
+        padding-right: 50px;
+        font-size: 18px;
+    }
+    form {
+        display: flex;
+        justify-content: center;
+    }
+    input[type=text],
+    input[type=password] {
+        width: 500px;
+    }
+    button {
+        width: 500px;
+    }
+    .container {
+        text-align: left;
+    }
+    .search h3 {
+        font-size: 18px;
+        text-align: center;
+        padding-top: 0;
+    }
+    .category {
+        padding-bottom: 30px;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    .form {
+        padding-bottom: 30px;
+        padding-top: 20px;
+        font-size: 16px;
+    }
+    .form label {
+        margin: 5px 40px 10px 0;
+    }
+    .form input {
+        vertical-align: middle;
+        margin: 5px 10px 10px 0px;
+        padding: 20px;
+    }
+    #seeArrangements {
+        width: 180px;
+        font-size: 15px;
+    }
+    .forward,
+    .newSearch {
+        text-align: center;
+    }
+    .forward button {
+        float: right;
+        width: 180px;
+        font-size: 15px;
+    }
+    .newSearch button {
+        float: left;
+        width: 180px;
+        font-size: 15px;
+    }
+    .swipeLeft,
+    .swipeRight {
+        width: 50px;
+        font-size: 20px;
+    }
+    .text h4 {
+        font-size: 18px;
+        padding: 10px 0;
+    }
+    .text h5 {
+        font-size: 14px;
+        padding: 5px 0;
+    }
+    .morningH3,
+    .afternoonH3,
+    .eveningH3 {
+        font-size: 20px;
+    }
+    .notMorning,
+    .notAfternoon,
+    .notEvening {
+        font-size: 15px;
+    }
+    #descriptionMorning,
+    #descriptionAfternoon,
+    #descriptionEvening {
+        font-size: 15px;
+    }
+    #headMorning,
+    #headAfternoon,
+    #headEvening {
+        font-size: 18px;
+    }
+    #externSiteMorning,
+    #externSiteAfternoon,
+    #externSiteEvening {
+        font-size: 15px;
+    }
+    #externSiteMorning a,
+    #externSiteAfternoon a,
+    #externSiteEvening a {
+        font-size: 15px;
+    }
+    .morning,
+    .afternoon,
+    .evening {
+        height: 300px;
+    }
+}

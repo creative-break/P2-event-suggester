@@ -1,0 +1,98 @@
+{
+    "hostName": "www.billetlugen.dk",
+    "subURL": [
+        "/billetter.html?affiliate=DKA&doc=category&fun=kategorieliste&detailadoc=erdetaila&detailbdoc=evdetailb&hkId=140&index=0&nextDays=200&nurbuchbar=true&showFilter=yes&sort_by=name&sort_direction=asc", 
+        "/billetter.html?affiliate=DKA&doc=category&fun=kategorieliste&detailadoc=erdetaila&detailbdoc=evdetailb&hkId=141&index=0&nextDays=200&nurbuchbar=true&showFilter=yes&sort_by=name&sort_direction=asc", 
+        "/billetter.html?affiliate=DKA&doc=category&fun=kategorieliste&detailadoc=erdetaila&detailbdoc=evdetailb&hkId=142&index=0&nextDays=200&nurbuchbar=true&showFilter=yes&sort_by=name&sort_direction=asc", 
+        "/billetter.html?affiliate=DKA&doc=category&fun=kategorieliste&detailadoc=erdetaila&detailbdoc=evdetailb&hkId=164&index=0&nextDays=200&nurbuchbar=true&showFilter=yes&sort_by=name&sort_direction=asc", 
+        "/billetter.html?affiliate=DKA&doc=category&fun=kategorieliste&detailadoc=erdetaila&detailbdoc=evdetailb&hkId=165&index=0&nextDays=200&nurbuchbar=true&showFilter=yes&sort_by=name&sort_direction=asc",  
+        "/billetter.html?affiliate=DKA&doc=category&fun=kategorieliste&detailadoc=erdetaila&detailbdoc=evdetailb&hkId=166&index=0&nextDays=200&nurbuchbar=true&showFilter=yes&sort_by=name&sort_direction=asc"   
+    ],
+    "billetlugenHeader": {
+        "Connection": "keep-alive",
+        "Sec-Fetch-Dest": "empty",
+        "X-Distil-Ajax": "wvvcydsefvucerceufyutv",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36",
+        "DNT": "1",
+        "Content-Type": "text/plain;charset=UTF-8",
+        "Accept": "*/*",
+        "Origin": "https://www.billetlugen.dk",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "cors",
+        "Accept-Language": "da-DK,da;q=0.9,en-DK;q=0.8,en;q=0.7,en-US;q=0.6",
+        "Cookie": "TCPID=120311653592455043390; D_SID=147.78.29.165:PX9W7tT1Ja7/ul537m7gNjfapJoN96yxbyisqRwpR+c; _ga=GA1.2.759982859.1584374039; _gcl_au=1.1.1023680056.1584374040; frosmo_keywords=.; __zlcmid=xFizNzixMR2JMY; D_ZID=697E4080-2A32-3F35-9E0A-87D67F89B373; D_ZUID=D026B41A-9A2B-39B6-9845-30DF17A293CD; D_HID=FCBBEF85-831A-3F80-927D-CEA8DA00FE11; OptanonAlertBoxClosed=2020-05-17T08:42:07.189Z; permInfo=1584181188096578601A17052020A20052020; dd=1; webid=REtBX05PX1NFU1NJT04=; InitialReferrer=; _gid=GA1.2.921584915.1589967036; WebCo_Tracker_Test_1_9=new; D_IID=42B67594-5031-3ECE-9CBE-237F56E13C1C; D_UID=C5ED275F-0A71-3068-85EE-FCFEC5A96052; webshop=YWZmaWxpYXRlPURLQSZhbW91bnQ9MCZhbW91bnRfZXZpZHM9MCZjb3Vwb249MC4wMCZjb3Vwb25fZm9ybWF0dGVkPTAlMkMwMCZjdXJyZW5jeV9jb2RlPURLSyZjdXJyZW5jeV9zeW1ib2w9REtLJmRldmljZV9pbmZvPTAmZXZpZHNfaW5fY2FydD0mZXZvX215Y2x1YnNfbWVtYmVyPSZnaWZ0d3JhcHBlcj0wLjAwJmdpZnR3cmFwcGVyX2Zvcm1hdHRlZD0wJTJDMDAmaW5zdXJhbmNlPTAuMDAmaW5zdXJhbmNlX2Zvcm1hdHRlZD0wJTJDMDAma2V5PUFwVWlmcE5pWjhMcyZrcHNfdXJsPSZsYW5ndWFnZT1kYSZsYXN0X2VyaWQ9MCZsYXN0X2V2aWQ9MTMwMDEwNjMmbG9jYWxlPWRhX2RrJmxvZ2luPTAmbWVya2l0ZW1zPTAmbW9kPTEmb3JkZXJfdG90YWw9MC4wMCZvcmRlcl90b3RhbF9mb3JtYXR0ZWQ9MCUyQzAwJnBraWRzX2luX2NhcnQ9JnByaWNlPTAuMDAmcHJpY2VfZm9ybWF0dGVkPTAlMkMwMCZyYW5kb209NjMwODYmcmVmZXJlcj1odHRwcyUzQSUyRiUyRnd3dy5iaWxsZXRsdWdlbi5kayUyRiZyZXNlcnZhdGlvbl9kdXJhdGlvbj0wJnNoaXBwaW5nPTAuMDAmc2hpcHBpbmdfZm9ybWF0dGVkPTAlMkMwMCZ0aWNrZXRhbW91bnRfcHJpY2VzX3BraWQ9JnRpY2tldHByaWNlPTAuMDAmdGlja2V0cHJpY2VfZm9ybWF0dGVkPTAlMkMwMCZ0b3RhbD0wLjAwJnRvdGFsX2Zvcm1hdHRlZD0wJTJDMDA=; OptanonConsent=isIABGlobal=false&datestamp=Wed+May+20+2020+14%3A53%3A59+GMT%2B0200+(Central+European+Summer+Time)&version=6.0.0&landingPath=NotLandingPage&groups=1%3A1%2C2%3A1%2C3%3A1&AwaitingReconsent=false; _gat_eventim=1; frosmo_quickContext=%7B%22VERSION%22%3A%221.1.0%22%2C%22UID%22%3A%22ekgab7.k7une9aa%22%2C%22origin%22%3A%22billetlugen_dk%22%2C%22lastDisplayTime%22%3A%7B%2261993%22%3A1589979240%2C%2262571%22%3A1589979240%7D%2C%22lastRevisionId%22%3A%7B%2261993%22%3A1%2C%2262571%22%3A1%7D%2C%22lastPageView%22%3A%7B%22time%22%3A1589979240366%7D%2C%22states%22%3A%7B%22session%22%3A%7B%7D%7D%7D"
+    },
+    "searchWords": {
+        "falseEvent": {
+            "exsist": true,
+            "numberOfSkips": 1,
+            "startSearch": "<h4>Spec"
+        }, 
+        "newEvent": {
+            "startSearch": "<h4>",
+            "endSearch": "class=\"taEvent\">"
+        },
+        "eventLink": {
+            "needExtraSearch": false,
+            "extraSearch": "",
+            "startSearch": "<a href=\"",
+            "endSearch": "\""
+        },
+        "eventName": {
+            "needExtraSearch": false,
+            "extraSearch": "",
+            "startSearch": "title=\"",
+            "endSearch": " - K",
+            "needEventLink": false
+        },
+        "eventVenue": {
+            "needExtraSearch": false,
+            "extraSearch": "",
+            "startSearch": "<dt>",
+            "endSearch": "</dt>",
+            "needEventLink": false
+        },
+        "eventLocation": {
+            "needExtraSearch": true,
+            "extraSearch": "<dd>",
+            "startSearch": "<span>",
+            "endSearch": "</span>",
+            "needEventLink": false
+        },
+        "eventDate": {
+            "needExtraSearch": true,
+            "extraSearch": "<div>",
+            "startSearch": "\t\t\t\t\t\t\t\t\t\t\t\t    \t\t\t\t\t\t                                ",
+            "endSearch": " / ",
+            "needEventLink": false
+        },
+        "eventTime": {
+            "needExtraSearch": true,
+            "extraSearch": "<div>",
+            "startSearch": "/ ",
+            "endSearch": "\t",
+            "needEventLink": false
+        },
+        "eventPrice": {
+            "needExtraSearch": false,
+            "extraSearch": "",
+            "startSearch": "\tDKK ",
+            "endSearch": "\t\t",
+            "needEventLink": false
+        },
+        "eventImage": {
+            "needExtraSearch": false,
+            "extraSearch": "",
+            "startSearch": "<img src=\"/",
+            "endSearch": "\"",
+            "needEventLink": false
+        },
+        "eventDescription": {
+            "needExtraSearch": true,
+            "extraSearch": "og:description",
+            "startSearch": "content=\"",
+            "endSearch": "\" />",
+            "needEventLink": true
+        }
+    }
+}

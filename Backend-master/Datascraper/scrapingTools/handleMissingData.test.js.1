@@ -1,0 +1,168 @@
+const functions = require('./handleMissingData');
+
+// CHECK FOR TRUTHY OR FALSY VALUES
+// toBeNULL matches only null
+// toBeUndefined matches only undefined
+// toBedefined is the opposite of to be undefined
+// toBetruthy matches anything that an if statement treats as true
+// toBeFalsy matches anything that an if statement treats as false
+
+// Tests if handleMissingData resolves 
+test('promise resolves', () => {
+    expect.assertions(1);
+    return expect(functions.handleMissingData(testEvent1) 
+    ).resolves.toBeDefined(); // Tests if the promise resolves and if the value is defined
+});
+
+// test handleMissingData with all values defined
+test('all values defined', () => {
+    expect.assertions(14);
+    return functions.handleMissingData(testEvent1)
+    .then(data => {
+        expect(testEvent1.title).toEqual('Test Event')
+        expect(testEvent1.event_datetime).toBeDefined()
+        expect(testEvent1.creation_datetime).toBeDefined()
+        expect(testEvent1.country).toEqual('Denmark')
+        expect(testEvent1.postcode).toEqual(9000)
+        expect(testEvent1.city).toEqual('Aalborg')
+        expect(testEvent1.address).toEqual('Bejsebakken 12')
+        expect(testEvent1.description).toEqual('Test Event Description')
+        expect(testEvent1.price).toEqual(240)
+        expect(testEvent1.duration).toEqual(90)
+        expect(testEvent1.source).toEqual('https://www.testevent.dk/test')
+        expect(testEvent1.image_source).toEqual('https://www.testevent.dk/test/image')
+        expect(testEvent1.fk_type).toEqual(3)
+        expect(testEvent1.remove_event).toEqual(false)
+    })
+});
+
+// test handleMissingData with no data
+test('all values empty', () => {
+    expect.assertions(14);
+    return functions.handleMissingData(testEvent2)
+    .then(data => {
+        expect(testEvent2.title).toEqual('')
+        expect(testEvent2.event_datetime).toBeDefined()
+        expect(testEvent2.creation_datetime).toBeDefined()
+        expect(testEvent2.country).toEqual('Denmark')
+        expect(testEvent2.postcode).toEqual(-1)
+        expect(testEvent2.city).toEqual('Ukendt')
+        expect(testEvent2.address).toEqual('')
+        expect(testEvent2.description).toEqual('Ukendt')
+        expect(testEvent2.price).toEqual(-1)
+        expect(testEvent2.duration).toEqual(-1)
+        expect(testEvent2.source).toEqual('')
+        expect(testEvent2.image_source).toEqual('Ukendt')
+        expect(testEvent2.fk_type).toEqual(8)
+        expect(testEvent2.remove_event).toEqual(true)    
+    })
+});
+
+test('test postalcode finder', () => {
+    expect.assertions(14);
+    return functions.handleMissingData(testEvent3)
+    .then(data => {
+        expect(testEvent3.title).toEqual('Test Event')
+        expect(testEvent3.event_datetime).toBeDefined()
+        expect(testEvent3.creation_datetime).toBeDefined()
+        expect(testEvent3.country).toEqual('Denmark')
+        expect(testEvent3.postcode).toEqual(8000)
+        expect(testEvent3.city).toEqual('Aarhus C')
+        expect(testEvent3.address).toEqual('Bejsebakken 12')
+        expect(testEvent3.description).toEqual('Test Event Description')
+        expect(testEvent3.price).toEqual(240)
+        expect(testEvent3.duration).toEqual(90)
+        expect(testEvent3.source).toEqual('https://www.testevent.dk/test')
+        expect(testEvent3.image_source).toEqual('https://www.testevent.dk/test/image')
+        expect(testEvent3.fk_type).toEqual(3)
+        expect(testEvent3.remove_event).toEqual(false)
+    })
+});
+
+test('test city finder', () => {
+    expect.assertions(14);
+    return functions.handleMissingData(testEvent4)
+    .then(data => {
+        expect(testEvent4.title).toEqual('Test Event')
+        expect(testEvent4.event_datetime).toBeDefined()
+        expect(testEvent4.creation_datetime).toBeDefined()
+        expect(testEvent4.country).toEqual('Denmark')
+        expect(testEvent4.postcode).toEqual(9000)
+        expect(testEvent4.city).toEqual('Aalborg')
+        expect(testEvent4.address).toEqual('Bejsebakken 12')
+        expect(testEvent4.description).toEqual('Test Event Description')
+        expect(testEvent4.price).toEqual(240)
+        expect(testEvent4.duration).toEqual(90)
+        expect(testEvent4.source).toEqual('https://www.testevent.dk/test')
+        expect(testEvent4.image_source).toEqual('https://www.testevent.dk/test/image')
+        expect(testEvent4.fk_type).toEqual(3)
+        expect(testEvent4.remove_event).toEqual(false)
+    })
+});
+
+test('positive negative test', () => {
+    expect.assertions(14);
+    return functions.handleMissingData(testEvent5)
+    .then(data => {
+        expect(testEvent5.title).toEqual('Test Event')
+        expect(testEvent5.event_datetime).toBeDefined()
+        expect(testEvent5.creation_datetime).toBeDefined()
+        expect(testEvent5.country).toEqual('Denmark')
+        expect(testEvent5.postcode).toEqual(8000)
+        expect(testEvent5.city).toEqual('Aarhus C')
+        expect(testEvent5.address).toEqual(342)
+        expect(testEvent5.description).toEqual('Test Event Description')
+        expect(testEvent5.price).toEqual('44')
+        expect(testEvent5.duration).toEqual('22')
+        expect(testEvent5.source).toEqual('fgfh5y5653g')
+        expect(testEvent5.image_source).toEqual('Ukendt')
+        expect(testEvent5.fk_type).toEqual(8)
+        expect(testEvent5.remove_event).toEqual(true)
+    })
+});
+
+function EventInfoDummy(title, event_datetime, creation_datetime, country, postcode, city, address, description, price, duration, source, image_source, fk_type, remove_event) {
+
+    this.title = title;
+    this.event_datetime = event_datetime;
+    this.creation_datetime = creation_datetime;
+    this.country = country;
+    this.postcode = postcode;
+    this.city = city;
+    this.address = address;
+    this.description = description;
+    this.price = price;
+    this.duration = duration;
+    this.source = source;
+    this.image_source = image_source;
+    this.fk_type = fk_type;
+    this.remove_event = remove_event;
+};
+
+let testEvent1 = new EventInfoDummy('Test Event', new Date(2020, 4, 20, 18, 13, 37), new Date(), 'Denmark', 9000 , 'Aalborg', 'Bejsebakken 12',
+                                'Test Event Description',
+                                240, 90, 'https://www.testevent.dk/test', 'https://www.testevent.dk/test/image',
+                                3);
+
+
+let testEvent2 = new EventInfoDummy('', '', '', '', '', '', '', '', '', '', '', '', '');
+
+
+let testEvent3 = new EventInfoDummy('Test Event', new Date(2020, 4, 20, 18, 13, 37), new Date(), 'Denmark', '', 'Aarhus', 'Bejsebakken 12',
+                                'Test Event Description',
+                                240, 90, 'https://www.testevent.dk/test', 'https://www.testevent.dk/test/image',
+                                3);
+
+
+let testEvent4 = new EventInfoDummy('Test Event', new Date(2020, 4, 20, 18, 13, 37), new Date(), 'Denmark', 9000, '', 'Bejsebakken 12',
+                                'Test Event Description',
+                                240, 90, 'https://www.testevent.dk/test', 'https://www.testevent.dk/test/image',
+                                3);
+
+let testEvent5 = new EventInfoDummy('Test Event', new Date(2020, 4, 20, 18, 13, 37), new Date(), 'Denmark', '', 'Aarhus', 342,
+                                'Test Event Description',
+                                '44', '22', 'fgfh5y5653g', '7tghgh6868',
+                                'abcd');
+
+
+                                

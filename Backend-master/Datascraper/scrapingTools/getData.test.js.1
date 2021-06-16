@@ -1,0 +1,15 @@
+const functions = require('./getData');
+
+// CHECK FOR TRUTHY OR FALSY VALUES
+// toBeNULL matches only null
+// toBeUndefined matches only undefined
+// toBeDefined is the opposite of to be undefined
+// toBeTruthy matches anything that an if statement treats as true
+// toBeFalsy matches anything that an if statement treats as false
+
+// Tests if getData resolves
+test('promise resolves', () => {
+    expect.assertions(1);
+    return expect(functions.getData('', 'www.aau.dk', '/uddannelser/bachelor/software')
+    ).resolves.toBeDefined(); // Tests if the promise resolves and if the value is defined
+},100000); // Jest waits 5000 milliseconds as default, this argument makes sure that the code has enough time to complete

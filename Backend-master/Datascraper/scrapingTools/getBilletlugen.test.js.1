@@ -1,0 +1,7 @@
+const functions = require('./getBilletlugen');
+
+
+test('Promise resolves', async () => {
+    await expect(functions.getBilletlugen()
+    ).resolves.toBeDefined()
+},100000);

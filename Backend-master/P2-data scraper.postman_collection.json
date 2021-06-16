@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "5af923aa-2109-4c9a-987d-5d393a888bb3",
+		"name": "P2-data scraper",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userName\":\"admin\",\n\t\"password\":\"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{siteName}}/api/users/register/",
+							"host": [
+								"{{siteName}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{siteName}}/api/users/",
+							"host": [
+								"{{siteName}}"
+							],
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\":\"admin\",\n\t\"password\":\"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{siteName}}/api/users/getToken/",
+							"host": [
+								"{{siteName}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"getToken",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RefreshToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"refreshToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTg4MTg0MjEwfQ.Bz2wR06eGxkkHx1Zt2l22IRBUBlAwCC1GpxeGtyysl8\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{siteName}}/api/users/token/",
+							"host": [
+								"{{siteName}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"token",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "eventsByPosition",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{siteName}}/api/events/eventsWithinArea?longitude=9.9193939&latitude=57.0482206&radius=3000",
+							"host": [
+								"{{siteName}}"
+							],
+							"path": [
+								"api",
+								"events",
+								"eventsWithinArea"
+							],
+							"query": [
+								{
+									"key": "longitude",
+									"value": "9.9193939"
+								},
+								{
+									"key": "latitude",
+									"value": "57.0482206"
+								},
+								{
+									"key": "radius",
+									"value": "3000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{siteName}}/api/events/",
+							"host": [
+								"{{siteName}}"
+							],
+							"path": [
+								"api",
+								"events",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTg5NjE4Nzg2LCJleHAiOjE1ODk2MjIzODZ9.u_WXMDh7qwy_r16wql0PzWatv2h-__pUSdt0A3beu04",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "20cf76f9-a175-445c-93bc-95669e8be4da",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "8a220eb5-ef05-43f9-ad6b-8ae94f756057",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "7dda937f-2251-433e-b9f9-5f6abf5e38d6",
+			"key": "siteName",
+			"value": "https://sw2b2-14.p2datsw.cs.aau.dk/node1",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

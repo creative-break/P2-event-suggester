@@ -1,0 +1,37 @@
+const functions = require('./webRequest.js');
+const HTMLString = 'H:/Users/Strife/Documents/GitHub/Backend/Datascraper/scrapingTools/webRequest.HTML';
+let fs = require("fs");
+let text = fs.readFileSync("Backend/Datascraper/scrapingTools/HTML.txt");
+const load = require('../DAL/loadConfig');
+
+
+
+
+let readline = require('readline');
+let stream = require('stream');
+
+let instream = fs.createReadStream('Backend/Datascraper/scrapingTools/HTML.txt');
+let outstream = new stream;
+let rl = readline.createInterface(instream, outstream);
+
+
+
+// CHECK FOR TRUTHY OR FALSY VALUES
+// toBeNULL matches only null
+// toBeUndefined matches only undefined
+// toBedefined is the opposite of to be undefined
+// toBetruthy matches anything that an if statement treats as true
+// toBeFalsy matches anything that an if statement treats as false
+
+// Tests if webRequest resolves promise
+test('promise resolves', () => {
+    expect.assertions(1);
+    return expect(functions.webRequest('', 'www.aau.dk', '/uddannelser/bachelor/software') 
+    ).resolves.toBeDefined(); // Tests if the promise resolves and if the value is defined
+});
+
+
+test('should return expected data', () => {
+    expect.assertions(1);
+    return expect(functions.webRequest('', 'www.blank.org', '')).resolves.toEqual(text);
+});

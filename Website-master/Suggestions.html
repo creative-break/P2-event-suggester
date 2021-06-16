@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--Makes sure the page is responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Reset stylesheet, this stylesheet is borrowed from http://richclarkdesign.com, and resets the browsers presettings-->
+    <link rel="resetstylesheet" href=".//css/resetStyle.css">
+    <!--Our style sheet-->
+    <link rel="stylesheet" href=".//css/style.css">
+    <!--Link to the font used on the page-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand&display=swap">
+    <!--Here is our JavaScript code-->
+    <script defer src=".//js/main.js"></script>
+    <script defer src=".//js/Suggestions.js"></script>
+    <!--Tab name-->
+    <title>Suggestions</title>
+</head>
+
+<body>
+    <!--Header: The top grey area of the page-->
+    <header>
+        <nav>
+            <section class="nav">
+                <div class="logo"></div>
+                <div class="headline">
+                    <h1>Event Suggester</h1>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <section class="welcome">
+            <h2 id="h2Welcome">Disse arrangementer er i dit område i dag</h2>
+            <h3 id="h3Welcome">"Swipe" med pilene, hvis du ønsker at se andre arrangementer indenfor det givne tidsrum</h3>
+            <h4 id="errorNoArrangement"></h4>
+        </section>
+        <!--Morning box-->
+        <h3 id="h3Morning" class="morningH3">Formiddags arrangementer</h3>
+        <section id="sectionMorning" class="morning">
+            <button id="swipeLeftMorning" class="swipeLeft">&lt</button>
+            <div id="imgMorning"></div>
+            <div class="text">
+                <h4 id="titleMorning"> </h4>
+                <h5 id="dateMorning"> </h5>
+                <h5 id="timeMorning"></h5>
+                <h5 id="locationMorning"></h5>
+                <h5 id="priceMorning"></h5>
+                <h5 id="categoryMorning"></h5>
+                <h5 id="durationMorning"></h5>
+            </div>
+            <button id="swipeRightMorning" class="swipeRight">&gt</button>
+        </section>
+        <div class="notMorning">
+            <input type="checkbox" id="morning" name="notChosen" value="Morning">
+            <label for="morning"> Ønsker IKKE et formiddags arrangement</label>
+        </div>
+        <div id="textMorning" class="textMorning">
+            <h4 id="headMorning">Beskrivelse</h4>
+            <h5 id="descriptionMorning"></h5>
+            <p id="externSiteMorning">Klik <a target="_blank" id="siteNameMorning">her</a> for at komme til arrangørens side</p>
+        </div>
+        <!--Afternoon box-->
+        <h3 id="h3Afternoon" class="afternoonH3">Eftermiddags arrangementer</h3>
+        <section id="sectionAfternoon" class="afternoon">
+            <button id="swipeLeftAfternoon" class="swipeLeft">&lt</button>
+            <div id="imgAfternoon"></div>
+            <div class="text">
+                <h4 id="titleAfternoon"></h4>
+                <h5 id="dateAfternoon"></h5>
+                <h5 id="timeAfternoon"></h5>
+                <h5 id="locationAfternoon"> </h5>
+                <h5 id="priceAfternoon"></h5>
+                <h5 id="categoryAfternoon"></h5>
+                <h5 id="durationAfternoon"></h5>
+            </div>
+            <button id="swipeRightAfternoon" class="swipeRight">&gt</button>
+        </section>
+        <div class="notAfternoon">
+            <input type="checkbox" id="afternoon" name="notChosen" value="Afternoon">
+            <label for="afternoon"> Ønsker IKKE et eftermiddags arrangement</label>
+        </div>
+        <div id="textAfternoon" class="textAfternoon">
+            <h4 id="headAfternoon">Beskrivelse</h4>
+            <h5 id="descriptionAfternoon"></h5>
+            <p id="externSiteAfternoon">Klik <a target="_blank" id="siteNameAfternoon">her</a> for at komme til arrangørens side</p>
+        </div>
+        <!--Evening box-->
+        <h3 id="h3Evening" class="eveningH3">Aften arrangementer</h3>
+        <section id="sectionEvening" class="evening">
+            <button id="swipeLeftEvening" class="swipeLeft">&lt</button>
+            <div id="imgEvening"></div>
+            <div class="text">
+                <h4 id="titleEvening"></h4>
+                <h5 id="dateEvening"></h5>
+                <h5 id="timeEvening"></h5>
+                <h5 id="locationEvening"></h5>
+                <h5 id="priceEvening"></h5>
+                <h5 id="categoryEvening"></h5>
+                <h5 id="durationEvening"></h5>
+            </div>
+            <button id="swipeRightEvening" class="swipeRight">&gt</button>
+        </section>
+        <div class="notEvening">
+            <input type="checkbox" id="evening" name="notChosen" value="Evening">
+            <label for="evening"> Ønsker IKKE et aften arrangement</label>
+        </div>
+        <div id="textEvening" class="textEvening">
+            <h4 id="headEvening">Beskrivelse</h4>
+            <h5 id="descriptionEvening"></h5>
+            <p id="externSiteEvening">Klik <a target="_blank" id="siteNameEvening">her</a> for at komme til arrangørens side</p>
+        </div>
+        <!--Forward and new search buttons-->
+        <section>
+            <div class="forward">
+                <button id="forward" type="submit" value="submit">Videre</button>
+            </div>
+            <div class="newSearch">
+                <button id="newSearch" type="submit" value="submit" onclick="window.location.href='./FindEvents.html'">Ny søgning</button>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

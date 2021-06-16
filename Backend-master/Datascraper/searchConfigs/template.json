@@ -1,0 +1,59 @@
+{
+  "falseEvent": {
+    "exsist": false,
+    "numberOfSkips": 0,
+    "startSearch": ""
+  },
+  "newEvent": {
+    "startSearch": "",
+    "endSearch": ""
+  },
+  "eventLink": {
+    "needExtraSearch": false,
+    "extraSearch": "",
+    "startSearch": "",
+    "endSearch": ""
+  },
+  "eventName": {
+    "needExtraSearch": false,
+    "extraSearch": "",
+    "startSearch": "",
+    "endSearch": ""
+  },
+  "eventVenue": {
+    "needExtraSearch": false,
+    "extraSearch": "",
+    "startSearch": "",
+    "endSearch": ""
+  },
+  "eventLocaton": {
+    "needExtraSearch": false,
+    "extraSearch": "",
+    "startSearch": "",
+    "endSearch": ""
+  },
+  "eventData": {
+    "needExtraSearch": false,
+    "extraSearch": "",
+    "startSearch": "",
+    "endSearch": ""
+  },
+  "eventTime": {
+    "needExtraSearch": false,
+    "extraSearch": "",
+    "startSearch": "",
+    "endSearch": ""
+  },
+  "eventPrice": {
+    "needExtraSearch": false,
+    "extraSearch": "",
+    "startSearch": "",
+    "endSearch": ""
+  },
+  "eventImage": {
+    "needExtraSearch": false,
+    "extraSearch": "",
+    "startSearch": "",
+    "endSearch": ""
+  }
+}

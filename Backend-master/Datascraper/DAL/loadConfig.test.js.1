@@ -1,0 +1,14 @@
+const fs = require('fs');
+//const configPath = '../Datascraper/searchConfigs/billetlugenSearch.json';
+const configPath = '../searchConfigs/'
+const functions = require('./loadConfig');
+
+let configFileName = 'billetlugenSearch.json';
+
+
+test('Promise resolves', async () => {
+    await expect(functions.loadConfig(configPath + configFileName)
+    ).resolves.toBeDefined()
+});
+
+//H:\Users\Strife\Documents\GitHub\Backend\Datascraper\searchConfigs

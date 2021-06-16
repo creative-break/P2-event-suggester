@@ -1,0 +1,30 @@
+const functions = require('./pushData');
+
+test('promise resolves', () => {
+    expect.assertions(1);
+    return expect(functions.pushData(testEvent1) 
+    ).resolves.toBeUndefined(); // Tests if the promise resolves and if the value is defined
+});
+
+function EventInfoDummy(title, event_datetime, creation_datetime, country, postcode, city, address, description, price, duration, source, image_source, fk_type, remove_event) {
+
+    this.title = title;
+    this.event_datetime = event_datetime;
+    this.creation_datetime = creation_datetime;
+    this.country = country;
+    this.postcode = postcode;
+    this.city = city;
+    this.address = address;
+    this.description = description;
+    this.price = price;
+    this.duration = duration;
+    this.source = source;
+    this.image_source = image_source;
+    this.fk_type = fk_type;
+    this.remove_event = remove_event;
+};
+
+let testEvent1 = new EventInfoDummy('Test Event', new Date(2020, 4, 20, 18, 13, 37), new Date(), 'Denmark', 9000 , 'Aalborg', 'Bejsebakken 12',
+                                'Test Event Description',
+                                240, 90, 'https://www.testevent.dk/test', 'https://www.testevent.dk/test/image',
+                                3);
